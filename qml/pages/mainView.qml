@@ -5,13 +5,49 @@ Page {
     id: page
     allowedOrientations: Orientation.All
 
-    PageHeader {
-        title: "Sailfish Tools"
-    }
+    SilicaListView {
+        id: mainView
+        ScrollDecorator { flickable: mainView }
+        contentHeight: parent.height
+        width: parent.width
+        anchors.fill: parent
+        spacing: Theme.paddingLarge
 
-    Button {
-        text: "Reboot me"
-        anchors.centerIn: parent
-        onClicked: device.reboot()
+        PageHeader {
+            id: header
+            title: "Sailfish Tools"
+        }
+
+        Column {
+            id: col
+            width: parent.width
+            spacing: Theme.paddingLarge
+
+            anchors.top: header.bottom
+            anchors.topMargin: -Theme.paddingLarge
+            anchors.left: parent.left
+            anchors.leftMargin: Theme.paddingMedium
+            anchors.right: parent.right
+            anchors.rightMargin: Theme.paddingMedium
+
+            SectionHeader {
+                text: "Device Operations"
+                //padding: 0
+            }
+
+            Button {
+                id: reboot
+                text: "Reboot"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: device.reboot()
+            }
+
+            Button {
+                text: "Shutdown"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: device.shut()
+            }
+
+        }
     }
 }
