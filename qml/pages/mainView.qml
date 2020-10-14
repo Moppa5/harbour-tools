@@ -31,8 +31,23 @@ Page {
             anchors.rightMargin: Theme.paddingMedium
 
             SectionHeader {
+                text: "Network switch"
+            }
+
+            Button {
+                text: "3G"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {}
+            }
+
+            Button {
+                text: "4G"
+                anchors.horizontalCenter: parent.horizontalCenter
+                onClicked: {}
+            }
+
+            SectionHeader {
                 text: "Device Operations"
-                //padding: 0
             }
 
             Button {
@@ -43,6 +58,7 @@ Page {
             }
 
             Button {
+                id: shutdown
                 text: "Shutdown"
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: device.shut()
