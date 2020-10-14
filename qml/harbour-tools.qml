@@ -25,4 +25,12 @@ ApplicationWindow
             device.call("req_shutdown", undefined)
         }
     }
+
+    function switch_3g() {
+        currentNetwork = "3G"
+    }
+
+    function switch_4g() {
+        currentNetwork = "4G"
+    }
 }

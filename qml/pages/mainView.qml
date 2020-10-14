@@ -37,13 +37,13 @@ Page {
             Button {
                 text: "3G"
                 anchors.horizontalCenter: parent.horizontalCenter
-                onClicked: {}
+                onClicked: network.switch_3g()
             }
 
             Button {
                 text: "4G"
                 anchors.horizontalCenter: parent.horizontalCenter
-                onClicked: {}
+                onClicked: network.switch_4g()
             }
 
             SectionHeader {
