@@ -9,6 +9,7 @@ ApplicationWindow
     initialPage: Qt.resolvedUrl("pages/mainView.qml")
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
+    property string currentNetwork: ""
 
     DBusInterface {
         id: device

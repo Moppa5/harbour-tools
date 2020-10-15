@@ -31,19 +31,19 @@ Page {
             anchors.rightMargin: Theme.paddingMedium
 
             SectionHeader {
-                text: "Network switch"
+                text: "Network Switch"
             }
 
             Button {
                 text: "3G"
                 anchors.horizontalCenter: parent.horizontalCenter
-                onClicked: network.switch_3g()
+                onClicked: app.switch_3g()
             }
 
             Button {
                 text: "4G"
                 anchors.horizontalCenter: parent.horizontalCenter
-                onClicked: network.switch_4g()
+                onClicked: app.switch_4g()
             }
 
             SectionHeader {

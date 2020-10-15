@@ -9,4 +9,13 @@ CoverBackground {
         text: qsTr("Sailfish Tools")
     }
 
+    CoverActionList {
+            id: coverAction
+
+            CoverAction {
+                iconSource: "image://theme/icon-cover-sync"
+                onTriggered: {
+                }
+            }
+        }
 }
