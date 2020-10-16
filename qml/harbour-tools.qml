@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import Nemo.DBus 2.0
+import DBusConnman 1.0
 import "pages"
 
 ApplicationWindow
@@ -10,6 +11,10 @@ ApplicationWindow
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
     property string currentNetwork: ""
+
+    DBusConn {
+        id: dbus
+    }
 
     DBusInterface {
         id: device

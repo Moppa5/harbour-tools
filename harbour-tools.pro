@@ -14,7 +14,8 @@ TARGET = harbour-tools
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-tools.cpp
+SOURCES += src/harbour-tools.cpp \
+    src/dbusconn.cpp
 
 DISTFILES += qml/harbour-tools.qml \
     qml/cover/CoverPage.qml \
@@ -37,3 +38,6 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-tools-de.ts
+
+HEADERS += \
+    src/dbusconn.h
